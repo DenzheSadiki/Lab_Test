@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "Lab Tests";
+}
+<header id="header">
+    <div class="container-fluid">
+    </div>
+</header>
+<section id="intro">
+    <div class="intro-container">
+        <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators"></ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <div class="carousel-background"><img src="img/intro-carousel/1.jpg" alt=""></div>
+                    <div class="carousel-container">
+                        <div class="carousel-content">
+                            <h2>Test</h2>
+                            <p>you can upload a CSV file consisting of N integers, sorted in a non-decreasing order click upload and then outputs the leader of the values..</p>
+                            @using (Html.BeginForm("index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                            {
+                                <form id="indexForm" method="post">
+                                    <div class="col">
+                                        <div class="row">
+                                            <button> <input type="file" class="btn-get-started scrollto" name="File" value="@Model. File" accept=".csv" required/> select file </button>
+                                        </div>
+                                        <div class="row">
+                                            <span></span><button class="btn-get-started scrollto" type="submit">upload</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            }
+                        </div>
+                        <div class="carousel-content">
+                            <h2>@ViewBag.Message</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer id="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>This is the git link to the github repository where I've Uploaded the solution </h4>
+                    <ul>
+                        <li><i class="ion-ios-arrow-right"></i> <a href="#">Home</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-newsletter">
+                    <h4>Foot Notes</h4>
+                    <p>
+                        I have built this solution using mvc 5, and a bootstrap template </br> the  picture in the backgrounod is a photograph I took in my free time
+                        </br>kind regards -sadiki
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
